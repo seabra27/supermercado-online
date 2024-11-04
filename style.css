@@ -1,6 +1,6 @@
 /* Estilos para a página */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #f7f7f7;
   margin: 0;
   padding: 0;
@@ -9,12 +9,12 @@ body {
 
 /* Estilo do título */
 .titulo {
-  font-size: 1.8em;
-  color: #34495e;
+  font-size: 2em;
+  color: #2e7d32; /* Verde escuro */
   text-align: center;
   margin: 20px 0;
   letter-spacing: 2px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* Estilos para o container de produtos */
@@ -30,16 +30,17 @@ body {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 15px;
-  margin: 10px;
-  width: 200px;
+  padding: 20px;
+  margin: 15px;
+  width: calc(25% - 30px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .produto:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .produto img {
@@ -49,8 +50,8 @@ body {
 }
 
 .produto h3 {
-  font-size: 1.1em;
-  color: #2c3e50;
+  font-size: 1.2em;
+  color: #2e7d32; /* Verde escuro */
   margin: 10px 0;
 }
 
@@ -64,9 +65,9 @@ body {
 .promocao {
   display: inline-block;
   background-color: #ffeb3b;
-  color: #d32f2f;
+  color: #d32f2f; /* Vermelho escuro */
   font-weight: bold;
-  padding: 3px 6px;
+  padding: 5px 10px;
   font-size: 0.8em;
   border-radius: 4px;
   margin-top: 8px;
@@ -74,24 +75,24 @@ body {
 
 /* Estilo do botão de compra */
 .produto button {
-  background-color: #3498db;
+  background-color: #2e7d32; /* Verde escuro */
   color: #fff;
   border: none;
-  padding: 8px 15px;
+  padding: 10px 20px;
   border-radius: 5px;
-  font-size: 0.9em;
+  font-size: 1em;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
 .produto button:hover {
-  background-color: #2980b9;
+  background-color: #1b5e20; /* Verde mais escuro */
 }
 
 /* Estilos para o carrinho */
 .carrinho {
   background-color: #fff;
-  border-top: 3px solid #34495e;
+  border-top: 3px solid #2e7d32; /* Verde escuro */
   padding: 20px;
   margin: 20px auto;
   width: 80%;
@@ -101,8 +102,8 @@ body {
 }
 
 .carrinho h2 {
-  font-size: 1.5em;
-  color: #34495e;
+  font-size: 1.8em;
+  color: #2e7d32; /* Verde escuro */
   text-align: center;
   margin-bottom: 20px;
 }
@@ -133,7 +134,7 @@ body {
 }
 
 .item-carrinho button {
-  background-color: #e74c3c;
+  background-color: #d32f2f; /* Vermelho escuro */
   color: #fff;
   border: none;
   padding: 6px 10px;
@@ -144,13 +145,26 @@ body {
 }
 
 .item-carrinho button:hover {
-  background-color: #c0392b;
+  background-color: #b71c1c; /* Vermelho mais escuro */
 }
 
 /* Estilo do total */
 .carrinho h3 {
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: #2c3e50;
   text-align: center;
   margin-top: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .produto {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .produto {
+    width: calc(100% - 30px);
+  }
 }
